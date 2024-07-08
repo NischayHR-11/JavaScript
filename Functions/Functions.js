@@ -93,4 +93,79 @@ sum= function (){
     console.log("Function Is Replaced As Variable Values Get Replaced !!")
 }
 
-console.log(sum());
+sum();
+console.log("\n");
+
+// Higher Order Functions  (Takes Function As Parameter)
+
+function test( func,n){
+
+    for(let i=0;i<n;i++){
+        func();
+    }
+}
+
+let print=function (){
+
+    console.log("HI..");
+}
+
+test(print,5);  // No () required For 'Print' While Passing as Argument. 
+
+
+// Function Genrators 
+
+// ODD or Even Machine Generator.
+
+function MachineGenrator( request){
+
+    if(request==="ODD"){
+
+        return function (n){
+
+            return !(n%2==0);
+        }
+
+    }else if(request==="EVEN"){
+
+        return function (n){
+
+            return (n%2==0);
+        }
+
+    }else{
+
+        console.log("Inavlid Request, Please Try Again !!");
+    }
+}
+
+
+let func=MachineGenrator("ODD");
+
+console.log(func);
+console.log(func(3));
+console.log(func(7));
+console.log(func(2));
+
+
+// Methods (Functions In Objects)
+
+let calculator = {
+
+    sum (a,b){
+
+        return a+b;
+    },
+
+    Multiplication (a,b){
+
+        return a*b;
+    },
+
+    difference (a,b){
+
+        return a-b;
+    }
+}
+
+console.log(calculator.Multiplication(2,3));
