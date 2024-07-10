@@ -54,4 +54,30 @@ arr.forEach(
     function (el){
         console.log(el);
     }
+);
+
+// Map  [Same as for each but here the function return value which is stored in array]
+
+
+let ar=[{
+    name:"Nischay",
+    marks:95
+},
+{
+    name:"Mahadev",
+    marks:98
+},
+{
+    name:"Vaibhav",
+    marks:97
+}
+];
+
+let cgpa=ar.map(
+    (el)=>{
+
+        return el.marks/10;
+    }
 )
+
+console.log(cgpa);  // Array
