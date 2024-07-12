@@ -81,3 +81,39 @@ let cgpa=ar.map(
 )
 
 console.log(cgpa);  // Array
+
+// Filter (Same as Map But Adds only true value element to Array)
+
+let filterMethod=arr.filter(
+
+    (el)=>{
+
+        return (el%2==0);
+    }
+);
+
+console.log(filterMethod);
+
+// every method [ every element should return true ] logical 'and'
+
+let n1=arr.every(
+
+    (el)=>{
+
+        return (el%2==0);
+    }
+);
+
+console.log(n1); // false {since every element is not even }
+
+// Some method  [logical 'OR']
+
+let n2=arr.some(
+
+    (el)=>{
+
+        return (el%2==0);
+    }
+);
+
+console.log(n2);
