@@ -1,7 +1,9 @@
 let but=document.querySelectorAll(".box");
 let h2=document.querySelector("h2");
+let h3=document.querySelector("h3");
 let level=0;
 let start=false;
+let highscore=0;
 
 let color=["blue","yellow","red","purple"];
 let game=[];
@@ -68,6 +70,10 @@ function check( ind){
     }else{
 
         h2.innerText="GAME OVER !! Your Score Is : "+level+"  Press Any Key To Play Again";
+        if(level>highscore){
+            highscore=level;
+            h3.innerText="HIGH SCORE : "+highscore;
+        }
         reset();
     }
 }
