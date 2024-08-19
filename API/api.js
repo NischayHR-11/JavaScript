@@ -50,5 +50,27 @@ async function facts() {
 
 facts();
 
+// Using axios
+
+async function facts() {
+
+    try{
+    
+    // Response 1
+
+    let data= await axios.get(url);
+    console.log(data.data.fact);
+
+    }catch(er){
+
+        console.log("ERROR OCCURED !! : "+er);
+    }
+
+    return "FACTS API Call Response..";
+
+}
+
+facts();
+
 
 
